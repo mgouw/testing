@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
+
+#homebody{
+    font-family: 'Poppins', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    color: #59564e;
+    line-height: 35px;
+    background: rgb(240, 224, 207);
+}
+#logo, #nav {
+    display: none;
+}
+
+
+
+#header {
+    margin-left: 25px;
+    padding-top: 25px;
+}
+
+#homebody, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('img/seattle.jpeg');
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#start{
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid rgb(248, 201, 47);
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+#start:hover {
+    background: rgb(248, 201, 47);
+}
+
+#header {
+    width: 100%;
+}
+
+#homebody #header {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
+    margin-left: 0;
+    color: inherit;
+    font-size: 1em;
+    left: 0;
+    padding: 0.5em 1.5em;
+    position: fixed;
+    top: 0;
+    display: block;
+    z-index: 1;
+}
+
+#header.ctrl{
+    width:100%;
+}
+
+#header h1 {
+    font-weight: 900;
+    margin: 0;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: inherit;
+}
+#logo {
+    display: inline;
+    margin-top: 0;
+}
+.logoPic {
+    width: 130px;
+    height: 65px;
+}
+#header nav {
+    letter-spacing: 0.075em;
+    position: absolute;
+    right: 1.5em;
+    text-transform: uppercase;
+    top: 1.5em;
+    display: block;
+}
+
+#header nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#header nav ul li {
+    display: inline-block;
+    margin-left: 1.5em;
+    padding-left: 0;
+}
+
+
+
+#header nav ul li a {
+    border: solid 1px transparent;
+    color: inherit;
+    display: inline-block;
+    line-height: 1em;
+    padding: 0.6em 0.75em;
+    text-decoration: none;
+}
+
+
+#header nav ul li .button {
+    font-size: 1em;
+    min-width: 0;
+    width: auto;
+}
+
+#header nav ul li.active > a, #header nav ul li:hover > a, #header nav ul li a:focus {
+    background: rgba(188, 202, 206, 0.15);
+}
+
+#header nav ul li.current > a {
+    font-weight: 900;
+}
+
+
+
+
+
