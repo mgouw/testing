@@ -47,6 +47,7 @@
     top: 40%;
     left: 50%;
     width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
     color: white;
 }
@@ -156,15 +157,19 @@
 }
 
 #loc {
+    margin-top：20%
+    margin-left: 20%;
     text-align: center;
 }
 
 #temp {
-    padding-top: 50%;
+    padding-top: 20%;
+    margin-left: 0%;
     text-align: center;
 }
 
 #description {
-    padding-top: 5%;
+    padding-top: 20%;
+    margin-left: 20%;
     text-align: center;
 }
