@@ -157,10 +157,17 @@
 
 #loc {
     margin-left: 20%;
-    text-align: left;
+    text-align: center;
 }
 
 #temp {
+    padding-top: 10%;
     margin-left: 20%;
-    text-align: left;
+    text-align: center;
+}
+
+#description {
+    padding-top: 15%;
+    margin-left: 20%;
+    text-align: center;
 }
