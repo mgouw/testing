@@ -156,18 +156,15 @@
 }
 
 #loc {
-    margin-left: 20%;
     text-align: center;
 }
 
 #temp {
-    padding-top: 10%;
-    margin-left: 20%;
+    padding-top: 50%;
     text-align: center;
 }
 
 #description {
-    padding-top: 15%;
-    margin-left: 20%;
+    padding-top: 5%;
     text-align: center;
 }
