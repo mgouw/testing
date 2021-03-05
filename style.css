@@ -44,8 +44,9 @@
 .hero-text{
     text-align: center;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
+    width: 100%;
     transform: translate(-50%, -50%);
     color: white;
 }
@@ -149,7 +150,17 @@
     font-weight: 900;
 }
 
+#weather {
+    width: 100%;
+    height: 100%;
+}
 
+#loc {
+    margin-left: 20%;
+    text-align: left;
+}
 
-
-
+#temp {
+    margin-left: 20%;
+    text-align: left;
+}

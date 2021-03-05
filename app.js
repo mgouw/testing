@@ -21,7 +21,7 @@ function getLocation() {
             var description = data.weather[0].description;
             var city = data.name;
             var country = data.sys.country;
-            document.getElementById("weather").innerHTML = "Current temperature in " + city + ", " + country +  " is " + temp + " °C with " + description;
+            document.getElementById("weather").innerHTML = "<div id='loc'>" + city + ", " + country +  "</div><div id='temp'>" + temp + " °C</div><div id='description'>" + description + "</div>";
         })
 
 
