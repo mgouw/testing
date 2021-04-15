@@ -19,11 +19,11 @@ function getLocation() {
         .then(data => {
             console.log(data);
             var temp = data.main.temp;
-            var description = 'rain'//data.weather[0].description;
+            var description = data.weather[0].description;
             var city = data.name;
             var country = data.sys.country;
             var rainimg = ['rain','showerrain','raindrop'];
-            var cloudsimg = ['fewclouds','brokenclouds','scatteredclouds'];
+            var cloudsimg = ['fewclouds','brokenclouds','scatteredclouds','cloudy'];
             var skyimg = ['clearsky','sunny'];
             document.getElementById("weather").innerHTML = "<div id='loc'>" + city + ", " + country +  "</div><div id='temp'>" + temp + " °C</div><div id='description'>" + description + "</div>";
 
