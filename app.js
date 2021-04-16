@@ -23,7 +23,7 @@ function getLocation() {
             var city = data.name;
             var country = data.sys.country;
             var rainimg = ['rain','showerrain','raindrop'];
-            var cloudsimg = ['fewclouds','brokenclouds','scatteredclouds','cloudy'];
+            var cloudsimg = ['fewclouds','brokenclouds','scatteredclouds','cloudy','cloud'];
             var skyimg = ['clearsky','sunny'];
             document.getElementById("weather").innerHTML = "<div id='loc'>" + city + ", " + country +  "</div><div id='temp'>" + temp + " °C</div><div id='description'>" + description + "</div>";
 
