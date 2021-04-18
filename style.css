@@ -10,6 +10,8 @@
     line-height: 35px;
     background: rgb(240, 224, 207);
 }
+
+
 #logo, #nav {
     display: none;
 }
@@ -40,7 +42,77 @@
     background-size: cover;
     position: relative;
 }
+#musicbg {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    /*linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),*/
+    background-image: url('img/meditation.jpeg');
 
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*box-shadow:-10px 0px 25px #404040;*/
+}
+
+#musicmain div {
+    height: 100vh;
+    position: relative;
+}
+
+#musicmain iframe {
+    margin: 0;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.musictype{
+    color: rgb(26, 46, 59);
+    line-height: 45px;
+    font-size: 50px;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    top: 15%;
+    letter-spacing: -1px;
+}
+
+.musicdes{
+    color: rgb(26, 46, 59);
+    line-height: 1.5em;
+    font-weight: 100;
+    font-style: normal;
+    font-family: Montserrat;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 70%;
+    letter-spacing: -1px;
+}
+#travelbg {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    /*linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),*/
+    background-image: url('img/sunshine.jpg');
+
+    /* Set a specific height */
+    height: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow:-10px 0px 25px #404040;
+}
 /* Place text in the middle of the image */
 .hero-text{
     text-align: center;
@@ -170,4 +242,46 @@
 #description {
     padding-top: 10%;
     text-align: center;
+}
+
+.video-custom .title {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.55);
+    bottom: 0;
+    color: #ffffff;
+    font-family: 'Google Sans', Roboto, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    padding: .1rem;
+    position: absolute;
+    width: 100%;
+}
+
+.video-custom {
+    border-top: .0625rem dashed #dadce0;
+}
+
+.video-custom svg {
+    fill: #d93025;
+    height: 4rem;
+    left: 50%;
+    margin: -2rem 0 0 -2rem;
+    opacity: .7;
+    position: absolute;
+    top: 50%;
+    transform: scale(.95,.82);
+    transition: opacity 400ms;
+    width: 4rem;
+    z-index: 1;
+}
+
+.video-custom a {
+    background-size: 100%;
+    box-shadow: inset rgba(0, 0, 0, 0.25) 0 0 .625rem;
+    display: block;
+    height: 7.8125rem;
+    margin: 1em 0 1em 1em;
+    position: relative;
+    width: 13.875rem;
 }

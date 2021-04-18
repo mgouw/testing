@@ -7,10 +7,15 @@ function getLocation() {
   }
 
   function showPosition(position) {
+<<<<<<< HEAD
     //var latitude = position.coords.latitude;
     //var longitude = position.coords.longitude;
     var latitude = 47.6211;
     var longitude = -122.3244;
+=======
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+>>>>>>> refs/remotes/origin/main
     console.log(position.coords);
     console.log(latitude + " " + longitude);
     const key = "e14f5933d267004c2d3a342dba46828d";
@@ -25,7 +30,11 @@ function getLocation() {
             var city = data.name;
             var country = data.sys.country;
             var rainimg = ['rain','showerrain','raindrop'];
+<<<<<<< HEAD
             var cloudsimg = ['fewclouds','brokenclouds','scatteredclouds'];
+=======
+            var cloudsimg = ['fewclouds','brokenclouds','scatteredclouds','cloudy','cloud'];
+>>>>>>> refs/remotes/origin/main
             var skyimg = ['clearsky','sunny'];
             document.getElementById("weather").innerHTML = "<div id='loc'>" + city + ", " + country +  "</div><div id='temp'>" + temp + " °C</div><div id='description'>" + description + "</div>";
 
