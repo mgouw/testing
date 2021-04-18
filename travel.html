@@ -9,6 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta name="google-signin-client_id" content="491551402498-2u9qlqk0mgmvmr1cciac09tq3jlrgtrn.apps.googleusercontent.com">
 </head>
 
@@ -32,7 +40,14 @@
             </ul>
         </nav>
     </header>
-
+    <main>
+        <div class="album py-5" id="travelMain" >
+            <div class="container">
+                <div class="row" id="travelList">
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
@@ -87,5 +102,6 @@ firebase.analytics();
     
         
     </script>
-    <script src ="app.js"></script>
+    <script type="text/javascript" src="./cityUrl.json"></script>
+    <script src ="./travel.js" type="module"></script>
 </html>
