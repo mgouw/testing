@@ -89098,7 +89098,7 @@ function compare( a, b ) {
       return 1;
     }
     return 0;
-  }  
+}  
 
 
 /*function getData(url, cb) {
@@ -89136,8 +89136,8 @@ function showPosition(position) {
         var otherLat = tempData['lat'];
         var otherLng = tempData['lng'];
         var dist = distance(latitude, longitude, otherLat, otherLng);
-        if (dist < 50) {
-            const key = "5e19ecaa45ae4fba00f746f72d1063fc";
+        if (dist < 25) {
+            const key = "e14f5933d267004c2d3a342dba46828d";
             const weather = "https://api.openweathermap.org/data/2.5/weather?lat=" + otherLat + "&lon=" + otherLng + "&units=metric&appid=" + key;
               
             fetch(weather)
@@ -89177,69 +89177,18 @@ function showPosition(position) {
                         }
                     }
                     if (description.includes("clear") || description.includes("sun")) {
-                        ls.push({"city": city, "weather": description, "temperature": temp, "lat": lat, "lon": lon, "url": url, "distance": distance});
                         html = document.getElementById("travelList").innerHTML;
                         var idCurrent = "bg" + count;
-                        html += "<div class='col-sm-12 col-md-6 col-lg-4' style='margin-bottom:40px'><div class='card mb-4 box-shadow' id='" + idCurrent + "' style='color:black; height:200px'><div class='card-body'><h2 class = 'card-title'>" + city + "</h2><p class='card-text'>" + description + "</p></div></div></div>";
+                        html += "<div class='col-sm-12 col-md-6 col-lg-4' style='margin-top:45px'><div class='card mb-4 box-shadow' id='" + idCurrent + "' style='color:black; height:200px'><div class='card-body'><h2 class = 'card-title'>" + city + "</h2><p class='card-text'>" + description + "</p><p class='card-text'>" + Math.round(distance * 100) / 100 + "</p></div></div></div>";
                         document.getElementById("travelList").innerHTML = html;
                         document.getElementById(idCurrent).style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url('" + url + "')";                        
 
                     }
-
-                    /*var html = "<div class='card-body'>";
-                    var temp = html;
-                    temp += "<h2 class = 'card-title'>" + this.props.data.name + "</h2><p class='card-text'>";
-                    let intro = "";
-                    if (this.props.data.description === "") {
-                        intro += "( No Description )";
-                    } else {
-                        intro += this.props.data.description.substring(0,100);
-                    }
-                    if (this.props.data.description.length > 100) {
-                        temp += intro + "...";
-                    } else if (intro !== "") {
-                        temp += intro;
-                    }
-                    temp += "</p><div class='d-flex justify-content-between'><span class='type-span'>";
-                    let tag = this.props.data.tags;
-                    let tagArr = tag.split(",");
-                    let tagNum = tagArr.length;
-                    this.props.data.numTags = tagNum;
-                    if(tagArr.length > 3) {
-                        for (let k = 3; k < tagArr.length; k+= 3) {
-                            temp += "<mark>" + tagArr[k] + "</mark>  ";
-                        }
-                    } else {
-                        for (let k = 0; k < tagArr.length; k+= 3) {
-                            temp += "<mark>" + tagArr[k] + "</mark>  ";
-                        }
-                    }
-                    let ingre = this.props.data.ingredients;
-                    let ingreArr = ingre.split(",")
-                    let ingreNum = ingreArr.length;
-                    this.props.data.numIngredients = ingreNum;
-                    if (parseInt(this.props.data.minutes) > 999) {
-                        this.props.data.minutes = 999;
-                    }
-                    temp += "</span></div></div><div class='card-footer text-left text-muted'><p><small>" + ingreArr.length +
-                    " ingredients</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>"
-                    + this.props.data.minutes + " minutes</small></p>";
-                    temp = parse(temp);
-                    return(
-                        <div className='col-sm-12 col-md-6 col-lg-4'><div className='card mb-4 box-shadow'>{temp}{Recipespop(this.props.data)}</div></div>
-                    )*/
-
                 })
             //.catch(err => alert("Wrong city name!"));
-            
         }
-        
-
-    }
-
-    
+    }   
 }
-console.log(ls);
 
 
 getLocation();
