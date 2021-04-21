@@ -89116,7 +89116,6 @@ function showPosition(position) {
     var longitude = position.coords.longitude;
     //var latitude = 47.6211;
     //var longitude = -122.3244;
-    console.log(latitude + " " + longitude);
     for (var i = 0; i < data.length; i++) {
         var tempData = data[i];
         var otherLat = tempData['lat'];
