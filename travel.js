@@ -89098,21 +89098,7 @@ function compare( a, b ) {
       return 1;
     }
     return 0;
-}  
-
-
-/*function getData(url, cb) {
-    fetch(url)
-      .then(response => response.json())
-      .then(result => cb(result));
-  }
-  
-async function githubUsers(url) {
-    let response = await fetch(url);
-    let users = await response.json();
-    temp = users.main.temp;
-    description = users.weather[0].description;
-}*/
+}
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -89126,10 +89112,10 @@ function getLocation() {
 
 const ls = [];
 function showPosition(position) {
-    //var latitude = position.coords.latitude;
-    //var longitude = position.coords.longitude;
-    var latitude = 47.6211;
-    var longitude = -122.3244;
+    var latitude = position.coords.latitude;
+    var longitude = position.coords.longitude;
+    //var latitude = 47.6211;
+    //var longitude = -122.3244;
     console.log(latitude + " " + longitude);
     for (var i = 0; i < data.length; i++) {
         var tempData = data[i];
