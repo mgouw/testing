@@ -89122,7 +89122,7 @@ function showPosition(position) {
         var otherLat = tempData['lat'];
         var otherLng = tempData['lng'];
         var dist = distance(latitude, longitude, otherLat, otherLng);
-        if (dist < 25) {
+        if (dist < 50) {
             const key = "e14f5933d267004c2d3a342dba46828d";
             const weather = "https://api.openweathermap.org/data/2.5/weather?lat=" + otherLat + "&lon=" + otherLng + "&units=metric&appid=" + key;
               
@@ -89149,6 +89149,11 @@ function showPosition(position) {
                     }
                     var temp = d.main.temp;
                     var description = d.weather[0].description;
+                    description = description.split(" ");
+                    for (let z = 0; z < description.length; z++) {
+                      description[z] = description[z][0].toUpperCase() + description[z].substr(1);
+                    }
+                    description = description.join(" ")
                     var lat = d.coord.lat;
                     var lon = d.coord.lon;
                     var city = d.name;
@@ -89162,12 +89167,12 @@ function showPosition(position) {
                             count = k;
                         }
                     }
-                    if (description.includes("clear") || description.includes("sun")) {
+                    if (description.toUpperCase().includes("CLEAR") || description.toUpperCase().includes("SUN")) {
                         html = document.getElementById("travelList").innerHTML;
                         var idCurrent = "bg" + count;
-                        html += "<div class='col-sm-12 col-md-6 col-lg-4' style='margin-top:45px'><div class='card mb-4 box-shadow' id='" + idCurrent + "' style='color:black; height:200px'><div class='card-body'><h2 class = 'card-title'>" + city + "</h2><p class='card-text'>" + description + "</p><p class='card-text'>" + Math.round(distance * 100) / 100 + "</p></div></div></div>";
+                        html += "<div class='col-sm-12 col-md-6 col-lg-4' style='margin-top:45px'><div class='card mb-4 box-shadow' id='" + idCurrent + "' style='color:black; height:200px'><div class='card-body'><h2 class = 'card-title'>" + city + "</h2><p class='card-text'>" + description + "</p><p class='card-text'>" + Math.round(distance * 100) / 100 + " miles</p></div></div></div>";
                         document.getElementById("travelList").innerHTML = html;
-                        document.getElementById(idCurrent).style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url('" + url + "')";                        
+                        document.getElementById(idCurrent).style.backgroundImage = "linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0)), url('" + url + "')";                        
 
                     }
                 })

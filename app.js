@@ -11,7 +11,6 @@ function getLocation() {
     var longitude = position.coords.longitude;
     //var latitude = 47.6211;
     //var longitude = -122.3244;
-    console.log(latitude + " " + longitude);
     const key = "e14f5933d267004c2d3a342dba46828d";
     const weather = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=" + key;
 
