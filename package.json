@@ -2,7 +2,7 @@
   "name": "chat_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://okenchuu.github.io/capstone_teamboba",
+  "homepage": "https://mgouw.github.io/testing",
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "@testing-library/jest-dom": "^5.11.10",
